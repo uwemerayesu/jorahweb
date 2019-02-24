@@ -1,0 +1,42 @@
+<style>
+h1{
+   text-align:center;
+   color:green;
+   font-family:aerial;
+}
+label{
+   color:dark;
+}
+
+.container{
+   margin-left:50px;
+   background:green;
+   padding-top:20px;
+   padding-bottom:20px;
+}
+
+
+
+</style>
+
+<h1>UPLOAD MOVIES</h1>
+<div class="container" >
+<%= form_for @resume, html: { multipart: true } do |f| %>   
+    <%= f.label :title %> &nbsp &nbsp &nbsp &nbsp  
+    <%= f.text_field :title %> 
+    <br><br>
+     <%= f.label :category %>   
+    <%= f.text_field :category %>
+    <br><br>
+    <%= f.label :year %>  &nbsp &nbsp  &nbsp &nbsp
+    <%= f.text_field :year %>
+    <br><br>
+    <%= f.label :price %> &nbsp &nbsp   &nbsp &nbsp
+    <%= f.text_field :price %>  
+    <br><br>   
+    <%= f.label :attachment %>   
+    <%= f.file_field :attachment %>   
+    <br>   
+    <%= f.submit "Save",class: "btn btn-primary" %>   
+ <% end %>  
+ </div> 
